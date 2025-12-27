@@ -1,0 +1,31 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: []
+
+rule_files: []
+
+scrape_configs:
+  # FlashPipe API metrics
+  - job_name: 'flashpipe'
+    static_configs:
+      - targets: ['localhost:8181']  # Use 'flashpipe:8181' in Docker
+    metrics_path: '/metrics'
+    scrape_interval: 5s
+    scrape_timeout: 5s
+
+  # Redpanda metrics (if using Docker)
+  - job_name: 'redpanda'
+    static_configs:
+      - targets: ['localhost:9644']  # Use 'redpanda:9644' in Docker
+    metrics_path: '/public_metrics'
+    scrape_interval: 10s
+
+  # Prometheus self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
