@@ -2,6 +2,10 @@
 
 A low-latency, high-throughput event ingestion and streaming engine designed for ERP workflows. Built with Go, Redpanda (Kafka), and Redis.
 
+> **⚠️ Disclaimer**
+> 
+> This repository is a **trimmed-down, open-source version** of the original implementation. The production version resides in a private GitLab repository and contains proprietary business logic, additional ERP integrations, and company-specific implementations. This public version demonstrates the core architecture and patterns while omitting sensitive or proprietary code.
+
 ## Features
 
 - **High Throughput**: Optimized for 50K+ events/second with batching and async processing
