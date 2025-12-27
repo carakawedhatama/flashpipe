@@ -4,8 +4,8 @@ A low-latency, high-throughput event ingestion and streaming engine designed for
 
 ## Features
 
-- **High Throughput**: Optimized for 100k+ events/second with batching and async processing
-- **Low Latency**: Sub-millisecond p99 latency with LZ4 compression
+- **High Throughput**: Optimized for 50K+ events/second with batching and async processing
+- **Low Latency**: Sub-second p99 latency with LZ4 compression
 - **ERP-Ready**: Built-in support for Payroll, Attendance, and Trial Balance workflows
 - **Idempotency**: Redis-backed idempotency keys prevent duplicate processing
 - **Rate Limiting**: Sliding window rate limiting per tenant
